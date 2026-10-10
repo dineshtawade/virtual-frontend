@@ -151,7 +151,7 @@ export default function RegisterPage() {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Rohan Sharma"
+                  placeholder="Enter Your Name"
                   className="w-full pl-9 pr-3.5 py-2.5 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-slate-400 placeholder:font-normal placeholder:italic transition-all shadow-2xs"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -166,7 +166,7 @@ export default function RegisterPage() {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Apex Realty"
+                  placeholder="Enter Firm / Agency Name"
                   className="w-full pl-9 pr-3.5 py-2.5 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-slate-400 placeholder:font-normal placeholder:italic transition-all shadow-2xs"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -182,7 +182,7 @@ export default function RegisterPage() {
               <input
                 type="email"
                 required
-                placeholder="e.g. rohan@apexrealty.com"
+                placeholder="Enter Your Work Email"
                 className="w-full pl-9 pr-3.5 py-2.5 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-slate-400 placeholder:font-normal placeholder:italic transition-all shadow-2xs"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -198,7 +198,7 @@ export default function RegisterPage() {
               <input
                 type={showPassword ? 'text' : 'password'}
                 required
-                placeholder="Enter password (min 6 chars)"
+                placeholder="Create a Password"
                 className="w-full pl-9 pr-10 py-2.5 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-slate-400 placeholder:font-normal placeholder:italic transition-all shadow-2xs"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
@@ -222,7 +222,7 @@ export default function RegisterPage() {
               <input
                 type={showConfirmPassword ? 'text' : 'password'}
                 required
-                placeholder="Re-enter password to confirm"
+                placeholder="Confirm Your Password"
                 className="w-full pl-9 pr-10 py-2.5 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-slate-400 placeholder:font-normal placeholder:italic transition-all shadow-2xs"
                 value={formData.confirmPassword}
                 onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
@@ -281,11 +281,10 @@ export default function RegisterPage() {
               {/* Option 1: Basic Free */}
               <div
                 onClick={() => setFormData({ ...formData, initialPlan: 'none' })}
-                className={`p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col justify-between ${
-                  formData.initialPlan === 'none'
+                className={`p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col justify-between ${formData.initialPlan === 'none'
                     ? 'border-blue-600 bg-blue-50/40 shadow-md'
                     : 'border-slate-200 bg-white hover:border-slate-300'
-                }`}
+                  }`}
               >
                 <div>
                   <div className="flex justify-between items-center mb-2">
@@ -308,11 +307,10 @@ export default function RegisterPage() {
               {/* Option 2: Direct Inventory */}
               <div
                 onClick={() => setFormData({ ...formData, initialPlan: 'di_auto_pay' })}
-                className={`p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col justify-between ${
-                  formData.initialPlan === 'di_auto_pay'
+                className={`p-5 rounded-2xl border-2 transition-all cursor-pointer flex flex-col justify-between ${formData.initialPlan === 'di_auto_pay'
                     ? 'border-blue-600 bg-blue-50/40 shadow-md'
                     : 'border-slate-200 bg-white hover:border-slate-300'
-                }`}
+                  }`}
               >
                 <div>
                   <div className="flex justify-between items-center mb-2">
@@ -335,11 +333,10 @@ export default function RegisterPage() {
               {/* Option 3: Combined Special */}
               <div
                 onClick={() => setFormData({ ...formData, initialPlan: 'combined_auto_pay' })}
-                className={`p-5 rounded-2xl border-2 relative transition-all cursor-pointer flex flex-col justify-between ${
-                  formData.initialPlan === 'combined_auto_pay'
+                className={`p-5 rounded-2xl border-2 relative transition-all cursor-pointer flex flex-col justify-between ${formData.initialPlan === 'combined_auto_pay'
                     ? 'border-indigo-600 bg-indigo-50/40 shadow-md ring-2 ring-indigo-500/20'
                     : 'border-slate-200 bg-white hover:border-indigo-300'
-                }`}
+                  }`}
               >
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
                   Recommended Bundle
